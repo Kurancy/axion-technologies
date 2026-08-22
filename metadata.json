@@ -1,0 +1,6 @@
+{
+  "name": "Axion Technologies",
+  "description": "Enterprise technology platform powering AI, automation, ERP, WMS, and digital transformation with real-time AI/human communication and administration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

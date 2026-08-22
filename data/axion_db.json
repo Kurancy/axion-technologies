@@ -1,0 +1,1672 @@
+{
+  "admins": [
+    {
+      "id": "admin-1",
+      "username": "admin",
+      "email": "abdullahiabubakar9992@gmail.com",
+      "name": "Abdullahi Abubakar",
+      "role": "Super Admin",
+      "active": true,
+      "passwordHash": "Axion2026!"
+    },
+    {
+      "id": "admin-2",
+      "username": "solutions",
+      "email": "solutions@axiontech.com",
+      "name": "Tariq Al-Mansoor",
+      "role": "Solutions Director",
+      "active": true,
+      "passwordHash": "Axion2026!"
+    }
+  ],
+  "conversations": [
+    {
+      "visitorId": "v_1787218773351_l2tui",
+      "visitorName": "dfk'b",
+      "status": "WAITING",
+      "priority": "HIGH",
+      "pageUrl": "/",
+      "id": "conv-1787400925786-rmxzc7",
+      "createdAt": "2026-08-22T12:15:25.786Z",
+      "updatedAt": "2026-08-22T15:12:29.012Z",
+      "unreadAdminCount": 0,
+      "unreadVisitorCount": 0,
+      "lastMessage": "Contact details received for dfk'b (ldkfdb@gmm.com). An Axion consultant will follow up shortly.",
+      "assignedAdminId": "admin-1",
+      "assignedAdminName": "Abdullahi Abubakar",
+      "handoffReason": "Visitor clicked Talk to Human",
+      "visitorEmail": "ldkfdb@gmm.com",
+      "visitorPhone": "df909707",
+      "visitorCompany": "ihoihoh"
+    },
+    {
+      "visitorId": "v_1787218711205_67t9y",
+      "visitorName": "Enterprise Visitor",
+      "status": "HUMAN_ACTIVE",
+      "priority": "NORMAL",
+      "pageUrl": "/",
+      "id": "conv-1787400502853-73rvhv",
+      "createdAt": "2026-08-22T12:08:22.853Z",
+      "updatedAt": "2026-08-22T12:14:41.163Z",
+      "unreadAdminCount": 1,
+      "unreadVisitorCount": 2,
+      "lastMessage": "how can youb do this",
+      "assignedAdminName": "Abdullahi Abubakar"
+    },
+    {
+      "id": "conv-sample-1",
+      "visitorId": "vis-101",
+      "visitorName": "Engr. Farouk Al-Hassan",
+      "visitorEmail": "f.alhassan@kanologistix.ng",
+      "visitorPhone": "+234 803 555 0192",
+      "visitorCompany": "Kano Logistics & Distribution Ltd",
+      "visitorCountry": "Nigeria",
+      "status": "HUMAN_REQUESTED",
+      "priority": "HIGH",
+      "pageUrl": "/solutions/wms",
+      "handoffReason": "Inquiring about multi-depot WMS with SAP Business One real-time sync.",
+      "createdAt": "2026-08-22T10:08:17.193Z",
+      "updatedAt": "2026-08-22T12:16:26.031Z",
+      "unreadAdminCount": 0,
+      "unreadVisitorCount": 0,
+      "lastMessage": "Can someone from the technical team advise if Axion WMS supports offline barcoding in warehouses with intermittent internet?"
+    },
+    {
+      "id": "conv-sample-2",
+      "visitorId": "vis-102",
+      "visitorName": "Sultan Al-Otaibi",
+      "visitorEmail": "sultan@riyadhparts.sa",
+      "visitorPhone": "+966 50 123 4567",
+      "visitorCompany": "Al-Otaibi Industrial Supplies",
+      "visitorCountry": "Saudi Arabia",
+      "status": "AI_ACTIVE",
+      "priority": "NORMAL",
+      "pageUrl": "/products/axion-ai",
+      "createdAt": "2026-08-22T07:08:17.194Z",
+      "updatedAt": "2026-08-22T12:16:24.180Z",
+      "unreadAdminCount": 0,
+      "unreadVisitorCount": 0,
+      "lastMessage": "Axion AI intelligent agent architecture handles bilingual Arabic/English document parsing seamlessly."
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-1",
+      "conversationId": "conv-sample-1",
+      "senderRole": "visitor",
+      "senderName": "Engr. Farouk Al-Hassan",
+      "content": "Hello, we operate 4 distribution warehouses across Lagos, Kano, and Abuja. Does Axion WMS support batch tracking and SAP Business One integration?",
+      "createdAt": "2026-08-22T10:08:17.194Z"
+    },
+    {
+      "id": "msg-2",
+      "conversationId": "conv-sample-1",
+      "senderRole": "ai",
+      "senderName": "Axion AI",
+      "content": "Yes! Axion WMS features native two-way synchronization with SAP Business One, automated batch/lot tracking, barcode scanner support, and real-time inventory visibility across distributed multi-warehouse sites.",
+      "createdAt": "2026-08-22T10:08:22.194Z"
+    },
+    {
+      "id": "msg-3",
+      "conversationId": "conv-sample-1",
+      "senderRole": "visitor",
+      "senderName": "Engr. Farouk Al-Hassan",
+      "content": "Can someone from the technical team advise if Axion WMS supports offline barcoding in warehouses with intermittent internet? I want to speak with someone.",
+      "createdAt": "2026-08-22T11:38:17.194Z"
+    },
+    {
+      "id": "msg-4",
+      "conversationId": "conv-sample-1",
+      "senderRole": "system",
+      "senderName": "System",
+      "content": "Human specialist requested. An Axion enterprise engineer has been alerted and will join shortly.",
+      "createdAt": "2026-08-22T11:38:18.194Z"
+    },
+    {
+      "conversationId": "conv-1787400502853-73rvhv",
+      "senderRole": "ai",
+      "senderName": "Axion AI",
+      "content": "Welcome to Axion Technologies. How can we help your business engineer intelligent operations today?",
+      "id": "msg-1787400502857-ts123g",
+      "createdAt": "2026-08-22T12:08:22.857Z"
+    },
+    {
+      "conversationId": "conv-1787400502853-73rvhv",
+      "senderRole": "admin",
+      "senderName": "Abdullahi Abubakar",
+      "content": "hi",
+      "id": "msg-1787400672826-b0flek",
+      "createdAt": "2026-08-22T12:11:12.826Z"
+    },
+    {
+      "conversationId": "conv-1787400502853-73rvhv",
+      "senderRole": "visitor",
+      "senderName": "Visitor",
+      "content": "Tell me about Axion WMS",
+      "id": "msg-1787400855724-h321ur",
+      "createdAt": "2026-08-22T12:14:15.724Z"
+    },
+    {
+      "conversationId": "conv-1787400502853-73rvhv",
+      "senderRole": "admin",
+      "senderName": "Abdullahi Abubakar",
+      "content": "how can youb do this",
+      "id": "msg-1787400881162-vjlxus",
+      "createdAt": "2026-08-22T12:14:41.163Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "ai",
+      "senderName": "Axion AI",
+      "content": "Welcome to Axion Technologies. How can we help your business engineer intelligent operations today?",
+      "id": "msg-1787400925798-1cu01o",
+      "createdAt": "2026-08-22T12:15:25.798Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "visitor",
+      "senderName": "Visitor",
+      "content": "Do you support ZATCA / FIRS e-invoicing?",
+      "id": "msg-1787400937348-sujaef",
+      "createdAt": "2026-08-22T12:15:37.348Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "ai",
+      "senderName": "Axion AI",
+      "content": "Axion Technologies engineers intelligent enterprise systems including AI Agents, SAP & ERP integrations, Axion WMS, and bespoke software. How can we assist your business operations today? You can also request a human specialist at any time.",
+      "id": "msg-1787400937381-fwktsw",
+      "createdAt": "2026-08-22T12:15:37.381Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "system",
+      "senderName": "System",
+      "content": "Abdullahi Abubakar from Axion Technologies joined the conversation.",
+      "id": "msg-1787411373302-1v4qvg",
+      "createdAt": "2026-08-22T15:09:33.302Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "system",
+      "senderName": "System",
+      "content": "This conversation has been concluded. Thank you for connecting with Axion Technologies.",
+      "id": "msg-1787411392887-x4j8re",
+      "createdAt": "2026-08-22T15:09:52.887Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "system",
+      "senderName": "System",
+      "content": "This conversation has been concluded. Thank you for connecting with Axion Technologies.",
+      "id": "msg-1787411394145-mcxpto",
+      "createdAt": "2026-08-22T15:09:54.145Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "system",
+      "senderName": "System",
+      "content": "This conversation has been concluded. Thank you for connecting with Axion Technologies.",
+      "id": "msg-1787411395109-7ch0fr",
+      "createdAt": "2026-08-22T15:09:55.109Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "system",
+      "senderName": "System",
+      "content": "This conversation has been concluded. Thank you for connecting with Axion Technologies.",
+      "id": "msg-1787411395652-7g3u80",
+      "createdAt": "2026-08-22T15:09:55.652Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "system",
+      "senderName": "System",
+      "content": "This conversation has been concluded. Thank you for connecting with Axion Technologies.",
+      "id": "msg-1787411396051-zlztq6",
+      "createdAt": "2026-08-22T15:09:56.051Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "system",
+      "senderName": "System",
+      "content": "Abdullahi Abubakar from Axion Technologies joined the conversation.",
+      "id": "msg-1787411398105-qj51g3",
+      "createdAt": "2026-08-22T15:09:58.105Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "system",
+      "senderName": "System",
+      "content": "An Axion team member has been alerted and will join the conversation shortly.",
+      "id": "msg-1787411525311-jn13lc",
+      "createdAt": "2026-08-22T15:12:05.311Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "system",
+      "senderName": "System",
+      "content": "Contact details received for dfk'b (ldkfdb@gmm.com). An Axion consultant will follow up shortly.",
+      "id": "msg-1787411549012-jh8ej7",
+      "createdAt": "2026-08-22T15:12:29.012Z"
+    }
+  ],
+  "leads": [
+    {
+      "name": "dfk'b",
+      "company": "ihoihoh",
+      "email": "ldkfdb@gmm.com",
+      "phone": "df909707",
+      "source": "ai_chatbot",
+      "interest": "Offline Live Chat Callback",
+      "status": "NEW",
+      "priority": "HIGH",
+      "notes": "Lead captured during live chat handoff request",
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "id": "lead-1787411548996-50hixz",
+      "createdAt": "2026-08-22T15:12:28.996Z",
+      "updatedAt": "2026-08-22T15:12:28.996Z"
+    },
+    {
+      "name": "Enterprise Visitor",
+      "company": "Direct Chat Enterprise",
+      "email": "visitor_2tui@lead.axion",
+      "phone": "",
+      "country": "Nigeria",
+      "industry": "Technology",
+      "source": "live_chat",
+      "interest": "General Enterprise Inquiry",
+      "status": "NEW",
+      "priority": "high",
+      "notes": "Converted from live chat session. Transcript: undefined",
+      "id": "lead-1787411383014-93vpa3",
+      "createdAt": "2026-08-22T15:09:43.014Z",
+      "updatedAt": "2026-08-22T15:09:43.014Z"
+    },
+    {
+      "id": "lead-1",
+      "name": "Engr. Farouk Al-Hassan",
+      "company": "Kano Logistics & Distribution Ltd",
+      "email": "f.alhassan@kanologistix.ng",
+      "phone": "+234 803 555 0192",
+      "country": "Nigeria",
+      "industry": "Logistics & Supply Chain",
+      "source": "human_handoff",
+      "interest": "Axion WMS & SAP Business One Integration",
+      "status": "QUALIFIED",
+      "priority": "urgent",
+      "notes": "High priority lead. Requires 4-site deployment assessment and offline handheld support.",
+      "estimatedValue": "$45,000 USD",
+      "conversationId": "conv-sample-1",
+      "createdAt": "2026-08-22T10:08:17.194Z",
+      "updatedAt": "2026-08-22T12:36:58.035Z"
+    },
+    {
+      "id": "lead-2",
+      "name": "Dr. Fatima Bawa",
+      "company": "Apex Medicare Health Systems",
+      "email": "fbawa@apexmedicare.com",
+      "phone": "+234 802 111 8844",
+      "country": "Nigeria",
+      "industry": "Healthcare",
+      "source": "contact_form",
+      "interest": "OCR & Document Intelligence + Custom Portal",
+      "status": "CONTACTED",
+      "priority": "NORMAL",
+      "notes": "Requested automated claims processing and patient record OCR.",
+      "estimatedValue": "$32,000 USD",
+      "createdAt": "2026-08-20T12:08:17.194Z",
+      "updatedAt": "2026-08-21T12:08:17.194Z"
+    },
+    {
+      "id": "lead-3",
+      "name": "Khalid Al-Ghamdi",
+      "company": "Red Sea Petrochemical Equipment",
+      "email": "khalid@redsea-petro.sa",
+      "phone": "+966 55 987 6543",
+      "country": "Saudi Arabia",
+      "industry": "Manufacturing",
+      "source": "quote_request",
+      "interest": "ERP & SAP Solutions",
+      "status": "PROPOSAL",
+      "priority": "HIGH",
+      "notes": "Proposal sent for SAP Business One cloud migration and shop-floor automation.",
+      "estimatedValue": "$78,000 USD",
+      "createdAt": "2026-08-18T12:08:17.194Z",
+      "updatedAt": "2026-08-20T12:08:17.194Z"
+    }
+  ],
+  "contactMessages": [
+    {
+      "id": "contact-1",
+      "name": "Dr. Fatima Bawa",
+      "company": "Apex Medicare Health Systems",
+      "email": "fbawa@apexmedicare.com",
+      "phone": "+234 802 111 8844",
+      "country": "Nigeria",
+      "industry": "Healthcare",
+      "serviceInterest": "AI & Automation",
+      "message": "We are seeking an intelligent OCR and workflow automation pipeline to parse medical billing claims from PDF forms into our core ERP.",
+      "status": "CONVERTED",
+      "leadId": "lead-2",
+      "createdAt": "2026-08-20T12:08:17.194Z",
+      "updatedAt": "2026-08-21T12:08:17.194Z"
+    },
+    {
+      "id": "contact-2",
+      "name": "Mustafa Al-Zahrani",
+      "company": "Eastern Province Cold Chain Co.",
+      "email": "mustafa@epcoldchain.sa",
+      "phone": "+966 54 888 2233",
+      "country": "Saudi Arabia",
+      "industry": "Warehousing & Distribution",
+      "serviceInterest": "Warehouse Management",
+      "message": "Looking for a multi-temperature cold storage warehouse management system with IoT sensor integration and automated dispatch routing.",
+      "status": "NEW",
+      "createdAt": "2026-08-22T08:08:17.194Z",
+      "updatedAt": "2026-08-22T08:08:17.194Z"
+    },
+    {
+      "id": "contact-3",
+      "name": "Chinedu Eze",
+      "company": "Prime Agro Exports",
+      "email": "c.eze@primeagro.com.ng",
+      "phone": "+234 809 333 4455",
+      "country": "Nigeria",
+      "industry": "Agriculture",
+      "serviceInterest": "ERP / SAP",
+      "message": "We want to modernize our agricultural aggregation, weighing scale integrations, and export compliance reporting.",
+      "status": "CONTACTED",
+      "createdAt": "2026-08-19T12:08:17.194Z",
+      "updatedAt": "2026-08-20T12:08:17.194Z"
+    }
+  ],
+  "knowledgeBase": [
+    {
+      "id": "kb-1",
+      "title": "About Axion Technologies",
+      "category": "Company",
+      "content": "Axion Technologies is a modern enterprise technology company engineering intelligent business systems. We specialize in AI & Intelligent Automation, AI Agents, OCR & Document Intelligence, ERP & SAP Solutions (including SAP Business One), Enterprise Custom Software, Warehouse Management Systems (Axion WMS), Data & BI, and Digital Transformation. Our primary markets are Nigeria, Africa, Saudi Arabia, and International enterprise clients. Our core engineering philosophy is: \"Start with the problem. Build the right solution. Measure the value. Scale intelligently.\"",
+      "keywords": [
+        "who we are",
+        "about axion",
+        "tagline",
+        "mission",
+        "markets",
+        "nigeria",
+        "saudi arabia",
+        "africa"
+      ],
+      "isPublished": true,
+      "priority": 100,
+      "updatedAt": "2026-08-22T12:08:17.191Z"
+    },
+    {
+      "id": "kb-2",
+      "title": "Core Solutions & Capabilities",
+      "category": "Services",
+      "content": "Axion provides 6 core solution areas: 1) AI & Intelligent Automation (autonomous agents, assistants, workflow orchestration, OCR/document processing); 2) ERP & SAP Solutions (SAP Business One implementations, integrations, custom extensions, legacy bridging); 3) Enterprise Software (bespoke portals, workflow engines, mission-critical business platforms); 4) Warehouse Management Systems (Axion WMS for barcode/RFID scanning, batching, stock movements, multi-depot analytics); 5) Data & Business Intelligence (executive dashboards, automated KPI pipelines, predictive analytics); 6) Digital Transformation (modernization, process auditing, cloud engineering).",
+      "keywords": [
+        "solutions",
+        "services",
+        "what we do",
+        "capabilities",
+        "automation",
+        "erp",
+        "sap",
+        "software",
+        "wms"
+      ],
+      "isPublished": true,
+      "priority": 95,
+      "updatedAt": "2026-08-22T12:08:17.191Z"
+    },
+    {
+      "id": "kb-3",
+      "title": "Product: Axion AI",
+      "category": "Products",
+      "content": "Axion AI (Status: Available) is an enterprise autonomous intelligence suite comprising domain-specific AI agents, multilingual conversational assistants, deep OCR document parsers, and automated decision engines that integrate directly into enterprise ERP and CRM systems.",
+      "keywords": [
+        "axion ai",
+        "agents",
+        "assistants",
+        "ocr",
+        "document intelligence",
+        "available"
+      ],
+      "isPublished": true,
+      "priority": 90,
+      "updatedAt": "2026-08-22T12:08:17.191Z"
+    },
+    {
+      "id": "kb-5",
+      "title": "Product: Axion WMS",
+      "category": "Products",
+      "content": "Axion WMS (Status: Available) is a modern Warehouse Management System designed for distributors, manufacturers, and logistics operators. It supports multi-depot inventory tracking, barcode/RFID workflows, batch/lot expiration monitoring, pick-pack-ship orchestration, offline handheld device sync, and real-time SAP/ERP integration.",
+      "keywords": [
+        "axion wms",
+        "warehouse",
+        "inventory",
+        "barcode",
+        "stock",
+        "shipping",
+        "available"
+      ],
+      "isPublished": true,
+      "priority": 90,
+      "updatedAt": "2026-08-22T12:08:17.191Z"
+    },
+    {
+      "id": "kb-4",
+      "title": "Product: Axion Vault",
+      "category": "Products",
+      "content": "Axion Vault (Status: In Development) is an enterprise knowledge repository and intelligent document compliance engine combining project workflows, encrypted documentation, semantic enterprise search, and automated audit trails.",
+      "keywords": [
+        "axion vault",
+        "documents",
+        "knowledge",
+        "in development",
+        "compliance"
+      ],
+      "isPublished": true,
+      "priority": 85,
+      "updatedAt": "2026-08-22T12:08:17.191Z"
+    },
+    {
+      "id": "kb-8",
+      "title": "Contact Information & Global Offices",
+      "category": "Contact",
+      "content": "Offices: Lagos (Victoria Island, Lagos, Nigeria), Riyadh (King Fahd Road, Riyadh, Saudi Arabia), London (Support & Engineering Node). Direct email: contact@axiontech.com or abdullahiabubakar9992@gmail.com. Phone: +234 1 800 AXION / +966 11 800 AXION. You can submit inquiries 24/7 on our contact form or request a live specialist via this chat.",
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "location",
+        "office",
+        "lagos",
+        "riyadh"
+      ],
+      "isPublished": true,
+      "priority": 85,
+      "updatedAt": "2026-08-22T12:08:17.191Z"
+    },
+    {
+      "id": "kb-6",
+      "title": "Target Industries & Experience",
+      "category": "Industries",
+      "content": "Axion provides tailored digital architectures across Manufacturing, Logistics & Supply Chain, Warehousing & Distribution, Retail, Healthcare, Education, Financial Services, Construction, Agriculture, Professional Services, SMEs, and Large Enterprises in Nigeria, GCC/Saudi Arabia, and globally.",
+      "keywords": [
+        "industries",
+        "manufacturing",
+        "logistics",
+        "healthcare",
+        "retail",
+        "agriculture",
+        "sme",
+        "enterprise"
+      ],
+      "isPublished": true,
+      "priority": 80,
+      "updatedAt": "2026-08-22T12:08:17.191Z"
+    },
+    {
+      "id": "kb-7",
+      "title": "Working with Axion & Engagement Model",
+      "category": "Sales",
+      "content": "To engage Axion Technologies: 1) Initial discovery call or chat with our solutions architects; 2) Business workflow and architecture assessment; 3) Prototype / pilot sprint demonstrating measurable ROI; 4) Full enterprise engineering, deployment, staff training, and 24/7 SLA maintenance. Contact us through the website or connect directly with our human specialists.",
+      "keywords": [
+        "engagement",
+        "pricing",
+        "process",
+        "how to work with us",
+        "consultation",
+        "quote"
+      ],
+      "isPublished": true,
+      "priority": 75,
+      "updatedAt": "2026-08-22T12:08:17.191Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "code": "AX-AI",
+      "name": "Axion AI",
+      "tagline": "Autonomous Agents & Intelligent Business Automation",
+      "description": "Enterprise AI suite featuring multi-agent workflow orchestration, multilingual Arabic/English document intelligence, intelligent OCR, and enterprise ERP connectors.",
+      "status": "Available",
+      "features": [
+        "Autonomous Agent Task Pipelines",
+        "Intelligent OCR & Unstructured Document Parsing",
+        "ERP/CRM Bidirectional Synchronizers",
+        "Multilingual Context Engine (English, Arabic)",
+        "Role-Based Enterprise Governance & Audit Logs"
+      ],
+      "targetIndustries": [
+        "Financial Services",
+        "Healthcare",
+        "Logistics",
+        "Enterprise Organizations"
+      ],
+      "specs": [
+        "Latency: <350ms",
+        "Accuracy: 99.4% on structured forms",
+        "Deployment: Cloud / On-Premise / Hybrid"
+      ],
+      "icon": "Bot"
+    },
+    {
+      "id": "prod-2",
+      "code": "AX-VAULT",
+      "name": "Axion Vault",
+      "tagline": "Projects + Documents + Knowledge + AI Intelligence",
+      "description": "Enterprise document intelligence and knowledge management system designed for regulatory compliance, contract analysis, and unified project repositories.",
+      "status": "In Development",
+      "features": [
+        "Semantic Neural Search across Enterprise Repositories",
+        "Automated Compliance & Clause Verification",
+        "Project Document Lifecycle Management",
+        "Zero-Knowledge End-to-End Encryption"
+      ],
+      "targetIndustries": [
+        "Construction",
+        "Professional Services",
+        "Healthcare",
+        "Financial Services"
+      ],
+      "specs": [
+        "SOC2 & ISO 27001 Ready Architecture",
+        "Supports 100+ Document Types",
+        "Vectorized Knowledge Index"
+      ],
+      "icon": "FolderLock"
+    },
+    {
+      "id": "prod-3",
+      "code": "AX-WMS",
+      "name": "Axion WMS",
+      "tagline": "Inventory + Warehouse + Operations + Analytics",
+      "description": "High-velocity Warehouse Management System engineered for rugged industrial operations, handheld barcode/RFID scanning, automated batch tracking, and direct SAP sync.",
+      "status": "Available",
+      "features": [
+        "Multi-Site & Multi-Depot Real-Time Inventory Control",
+        "Native SAP Business One & Custom ERP Two-Way Sync",
+        "Offline-First Handheld Scanner Support",
+        "Automated Pick-Pack-Ship Wave Orchestration",
+        "Batch, Lot, and Expiry Date Tracking with Heatmaps"
+      ],
+      "targetIndustries": [
+        "Warehousing & Distribution",
+        "Logistics & Supply Chain",
+        "Manufacturing",
+        "Retail"
+      ],
+      "specs": [
+        "Sub-second barcode scan resolution",
+        "Full offline sync queue",
+        "IoT scale & cold-chain sensor compatible"
+      ],
+      "icon": "Warehouse"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-1",
+      "slug": "ai-automation",
+      "name": "AI & Intelligent Automation",
+      "shortDesc": "Autonomous AI agents, document intelligence, OCR, and automated end-to-end business workflows.",
+      "fullDesc": "We build practical AI systems tailored to real business operations. From intelligent OCR document processing to autonomous enterprise agents that monitor systems, route approvals, and resolve complex multi-step workflows.",
+      "capabilities": [
+        "Autonomous AI Agents & Execution Loops",
+        "Conversational Business Assistants & Copilots",
+        "Intelligent OCR & Document Extraction (Invoices, Bills of Lading, Receipts)",
+        "End-to-End Workflow & RPA Orchestration",
+        "Bilingual Arabic & English Language Pipelines"
+      ],
+      "deliverables": [
+        "Custom AI Agent Pipelines",
+        "Document OCR & Extraction API",
+        "Workflow Integration Middleware",
+        "Real-time Monitoring & Performance Analytics"
+      ],
+      "icon": "Cpu"
+    },
+    {
+      "id": "srv-2",
+      "slug": "erp-sap",
+      "name": "ERP & SAP Solutions",
+      "shortDesc": "Certified SAP Business One implementations, legacy integrations, custom add-ons, and data pipelines.",
+      "fullDesc": "We bridge enterprise ERP systems with modern front-end applications, mobile tools, and automated pipelines. Whether deploying SAP Business One from scratch or building custom API middleware.",
+      "capabilities": [
+        "SAP Business One Implementation & Tuning",
+        "Custom ERP Add-ons & Service Layer Extensions",
+        "Legacy Database & ERP Bridge Connectors",
+        "Automated General Ledger & Financial Reconciliation Pipelines",
+        "Supply Chain & Production Scheduling Modules"
+      ],
+      "deliverables": [
+        "Full ERP Architecture Blueprint",
+        "Custom Integration Connectors",
+        "Data Migration & Cleansing Scripts",
+        "User Training & 24/7 SLA Support"
+      ],
+      "icon": "Layers"
+    },
+    {
+      "id": "srv-3",
+      "slug": "enterprise-software",
+      "name": "Enterprise Software Engineering",
+      "shortDesc": "Bespoke customer portals, internal operational systems, and resilient cloud architectures.",
+      "fullDesc": "We build high-performance custom business software that eliminates spreadsheets and fragmented tools. Designed for resilience, security, and high transactional throughput.",
+      "capabilities": [
+        "Custom B2B & Customer Portals",
+        "Internal Operational Workflow Applications",
+        "High-Throughput RESTful & GraphQL Microservices",
+        "Role-Based Access Control (RBAC) & Single Sign-On (SSO)",
+        "Cloud-Native Cloud Run / AWS / Hybrid Deployments"
+      ],
+      "deliverables": [
+        "Production-Ready Enterprise Web & Mobile Apps",
+        "Comprehensive Technical Documentation & API Schemas",
+        "Automated CI/CD Pipelines & Automated Tests"
+      ],
+      "icon": "Code"
+    },
+    {
+      "id": "srv-4",
+      "slug": "warehouse-management",
+      "name": "Warehouse Management & Logistics Tech",
+      "shortDesc": "High-throughput inventory tracking, multi-depot logistics, barcode/RFID, and fleet visibility.",
+      "fullDesc": "Transform warehouse floors from chaotic paper-based tracking into precision digital command centers. Our WMS solutions deliver sub-second inventory visibility, barcode integration, and intelligent picking paths.",
+      "capabilities": [
+        "Multi-Depot Inventory & Bin Location Management",
+        "Rugged Handheld Scanner & RFID Device Integration",
+        "Cross-Docking & Wave Picking Optimization",
+        "Lot/Batch/Serial Number Tracking & Recall Auditing",
+        "Carrier API & Shipping Manifest Automation"
+      ],
+      "deliverables": [
+        "Axion WMS Deployment",
+        "Barcode / Handheld Hardware Configuration",
+        "ERP Master Data Synchronizer"
+      ],
+      "icon": "Box"
+    },
+    {
+      "id": "srv-5",
+      "slug": "data-bi",
+      "name": "Data & Business Intelligence",
+      "shortDesc": "Real-time executive dashboards, data warehousing, KPI monitors, and operational reporting.",
+      "fullDesc": "Turn dark enterprise data into actionable executive intelligence. We build automated data pipelines, central data marts, and real-time visualization dashboards.",
+      "capabilities": [
+        "Automated ETL / ELT Data Pipelines",
+        "Executive KPI Command Centers & Dashboards",
+        "Operational Throughput & Bottleneck Analytics",
+        "Automated Email & Telegram/WhatsApp Alerting",
+        "Financial & Sales Forecasting Models"
+      ],
+      "deliverables": [
+        "Live Interactive BI Dashboards",
+        "Data Warehouse Schemas & Automated Ingestion",
+        "Executive KPI Digest Reports"
+      ],
+      "icon": "BarChart3"
+    },
+    {
+      "id": "srv-6",
+      "slug": "digital-transformation",
+      "name": "Digital Transformation & Advisory",
+      "shortDesc": "Strategic technology audits, legacy system modernization, and scalable engineering roadmaps.",
+      "fullDesc": "We help enterprise leadership navigate complex technical evolutions without disrupting day-to-day operations. From legacy decoupling to cloud migration and change management.",
+      "capabilities": [
+        "Enterprise Architecture & Gap Analysis",
+        "Legacy Monolith to Microservices Modernization",
+        "Cloud Migration & Cost Optimization",
+        "Security, Compliance & Disaster Recovery Design",
+        "Engineering Team Training & Enablement"
+      ],
+      "deliverables": [
+        "Strategic Technology Roadmap",
+        "Architecture Audit & Risk Report",
+        "Migration Execution Plan & Milestones"
+      ],
+      "icon": "Compass"
+    }
+  ],
+  "industries": [
+    {
+      "id": "ind-1",
+      "slug": "manufacturing",
+      "name": "Manufacturing & Industrial",
+      "tagline": "Shop-floor visibility, ERP material tracking, and automated quality logging.",
+      "challenges": [
+        "Fragmented production data",
+        "Unplanned machine downtime",
+        "Manual scrap tracking"
+      ],
+      "solutionsApplied": [
+        "Axion AI quality inspection OCR",
+        "SAP B1 production routing",
+        "IoT sensor telemetry"
+      ],
+      "caseExample": "Automated shop-floor data collection across 6 assembly lines for a heavy machinery producer.",
+      "metrics": "38% reduction in inventory reconciliation time",
+      "icon": "Factory"
+    },
+    {
+      "id": "ind-2",
+      "slug": "logistics-supply-chain",
+      "name": "Logistics & Supply Chain",
+      "tagline": "Multi-modal freight tracking, customs document intelligence, and dispatch optimization.",
+      "challenges": [
+        "Delayed bills of lading processing",
+        "Port congestion blindspots",
+        "Manual manifest creation"
+      ],
+      "solutionsApplied": [
+        "Bilingual OCR for airway bills & manifests",
+        "Real-time fleet API gateways",
+        "Axion WMS cross-docking"
+      ],
+      "caseExample": "Deployed automated freight invoice ingestion for a pan-African logistics provider.",
+      "metrics": "85% faster documentation processing",
+      "icon": "Truck"
+    },
+    {
+      "id": "ind-3",
+      "slug": "warehousing-distribution",
+      "name": "Warehousing & Distribution",
+      "tagline": "Sub-second inventory accuracy, barcode picking, and multi-depot sync.",
+      "challenges": [
+        "Mispick errors",
+        "Ghost stock in large warehouses",
+        "Slow order fulfillment turnaround"
+      ],
+      "solutionsApplied": [
+        "Axion WMS deployment",
+        "Handheld terminal integration",
+        "Automated pick routes"
+      ],
+      "caseExample": "Modernized 4 central distribution hubs in Kano and Lagos with real-time barcode reconciliation.",
+      "metrics": "99.8% pick accuracy achieved",
+      "icon": "Warehouse"
+    },
+    {
+      "id": "ind-4",
+      "slug": "retail-fmcg",
+      "name": "Retail & FMCG",
+      "tagline": "Omnichannel stock visibility, POS to ERP integration, and demand forecasting.",
+      "challenges": [
+        "Stockouts on fast-moving items",
+        "Slow price updates across branch networks",
+        "Manual vendor orders"
+      ],
+      "solutionsApplied": [
+        "Real-time POS sync to SAP",
+        "Automated purchase order generators",
+        "Supplier portal"
+      ],
+      "caseExample": "Connected 22 retail outlets to a centralized procurement engine with automated replenishment.",
+      "metrics": "42% lower stockout incidents",
+      "icon": "ShoppingBag"
+    },
+    {
+      "id": "ind-5",
+      "slug": "healthcare",
+      "name": "Healthcare & Life Sciences",
+      "tagline": "Medical billing OCR, pharmaceutical batch tracking, and secure patient portals.",
+      "challenges": [
+        "Slow insurance claim approvals",
+        "Stringent cold-chain drug compliance",
+        "Siloed hospital records"
+      ],
+      "solutionsApplied": [
+        "Axion OCR for claim forms",
+        "WMS temperature audit logging",
+        "HIPAA/local compliant portals"
+      ],
+      "caseExample": "Automated 15,000 monthly insurance reimbursement forms for a private hospital network.",
+      "metrics": "70% reduction in claims processing backlog",
+      "icon": "HeartPulse"
+    },
+    {
+      "id": "ind-6",
+      "slug": "financial-services",
+      "name": "Financial Services & Fintech",
+      "tagline": "KYC document verification, automated reconciliation, and executive dashboards.",
+      "challenges": [
+        "High compliance overhead",
+        "Manual bank statement reconciliation",
+        "Fraud detection latency"
+      ],
+      "solutionsApplied": [
+        "AI ID verification agent",
+        "High-throughput transactional reconciliation engine",
+        "Executive risk BI"
+      ],
+      "caseExample": "Engineered automated multi-currency reconciliation pipeline processing 250k daily transactions.",
+      "metrics": "99.99% automated reconciliation rate",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "ind-7",
+      "slug": "construction",
+      "name": "Construction & Real Estate",
+      "tagline": "Project milestone tracking, material procurement, and contractor billing.",
+      "challenges": [
+        "Budget overruns on raw materials",
+        "Scattered subcontractor invoices",
+        "Poor site-to-office sync"
+      ],
+      "solutionsApplied": [
+        "Axion Vault project documentation",
+        "Material dispatch WMS",
+        "ERP job costing"
+      ],
+      "caseExample": "Centralized procurement and subcontractor billing for a residential developer in Riyadh.",
+      "metrics": "14% savings on material waste",
+      "icon": "HardHat"
+    },
+    {
+      "id": "ind-8",
+      "slug": "agriculture",
+      "name": "Agriculture & Agro-Processing",
+      "tagline": "Outgrower management, weighbridge integration, and export compliance.",
+      "challenges": [
+        "Manual weighbridge logging",
+        "Tracing crop batches to farms",
+        "Export documentation delays"
+      ],
+      "solutionsApplied": [
+        "Weighbridge IoT data bridge",
+        "Axion WMS batch traceability",
+        "Automated phytosanitary filing"
+      ],
+      "caseExample": "Automated cocoa and sesame seed aggregation across 12 collection centers.",
+      "metrics": "100% export batch traceability",
+      "icon": "Wheat"
+    },
+    {
+      "id": "ind-9",
+      "slug": "professional-services",
+      "name": "Professional Services",
+      "tagline": "Client billing, timesheet intelligence, and proposal workflow engines.",
+      "challenges": [
+        "Unbilled advisory hours",
+        "Scattered contract archives",
+        "Manual proposal generation"
+      ],
+      "solutionsApplied": [
+        "Axion Vault proposal knowledge base",
+        "ERP timesheet integration",
+        "Client portal"
+      ],
+      "caseExample": "Deployed custom client billing and matter management platform for a top legal firm.",
+      "metrics": "25% increase in captured billable hours",
+      "icon": "Briefcase"
+    },
+    {
+      "id": "ind-10",
+      "slug": "sme-enterprise",
+      "name": "SMEs & Growing Businesses",
+      "tagline": "Lean enterprise toolkits, cloud ERP, and automated customer communication.",
+      "challenges": [
+        "Limited IT staffing",
+        "Disconnected legacy tools",
+        "Lack of real-time cash flow visibility"
+      ],
+      "solutionsApplied": [
+        "Axion AI chatbot + CRM",
+        "Lightweight SAP Business One deployment",
+        "Mobile dashboards"
+      ],
+      "caseExample": "Rapid 4-week deployment of end-to-end sales, inventory, and accounting for a scaling distributor.",
+      "metrics": "Go-live completed in 28 days",
+      "icon": "Building2"
+    }
+  ],
+  "notifications": [
+    {
+      "type": "new_lead",
+      "title": "New Lead Captured (Offline Chat)",
+      "message": "dfk'b from ihoihoh requested a callback.",
+      "link": "/admin/leads",
+      "metadata": {
+        "leadId": "lead-1787411548996-50hixz"
+      },
+      "id": "notif-1787411549020-uaq08l",
+      "read": false,
+      "createdAt": "2026-08-22T15:12:29.020Z"
+    },
+    {
+      "type": "human_handoff",
+      "title": "Human Specialist Requested",
+      "message": "Enterprise Visitor clicked \"Talk to a Human\".",
+      "link": "/admin/live-chat?conv=conv-1787400925786-rmxzc7",
+      "metadata": {
+        "conversationId": "conv-1787400925786-rmxzc7"
+      },
+      "id": "notif-1787411525319-79vjis",
+      "read": false,
+      "createdAt": "2026-08-22T15:12:05.319Z"
+    },
+    {
+      "type": "new_lead",
+      "title": "New Lead Created",
+      "message": "Enterprise Visitor from Direct Chat Enterprise registered as a new lead.",
+      "link": "/admin/leads",
+      "id": "notif-1787411383017-btc155",
+      "read": false,
+      "createdAt": "2026-08-22T15:09:43.017Z"
+    }
+  ],
+  "analyticsEvents": [
+    {
+      "id": "ev-1",
+      "eventType": "page_view",
+      "page": "/",
+      "visitorId": "vis-101",
+      "timestamp": "2026-08-22T09:08:17.194Z"
+    },
+    {
+      "id": "ev-2",
+      "eventType": "page_view",
+      "page": "/solutions",
+      "visitorId": "vis-101",
+      "timestamp": "2026-08-22T09:38:17.194Z"
+    },
+    {
+      "id": "ev-3",
+      "eventType": "chat_open",
+      "page": "/solutions/wms",
+      "visitorId": "vis-101",
+      "timestamp": "2026-08-22T10:08:17.194Z"
+    },
+    {
+      "id": "ev-4",
+      "eventType": "human_handoff_trigger",
+      "page": "/solutions/wms",
+      "visitorId": "vis-101",
+      "timestamp": "2026-08-22T11:38:17.194Z"
+    },
+    {
+      "id": "ev-5",
+      "eventType": "page_view",
+      "page": "/products",
+      "visitorId": "vis-102",
+      "timestamp": "2026-08-22T07:08:17.194Z"
+    },
+    {
+      "id": "ev-1787400502944-95aenm",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:08:22.944Z"
+    },
+    {
+      "id": "ev-1787400502979-k29akf",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:08:22.979Z"
+    },
+    {
+      "id": "ev-1787400580118-9liyz4",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:09:40.118Z"
+    },
+    {
+      "id": "ev-1787400651035-1pduol",
+      "eventType": "page_view",
+      "page": "/admin/live-chat",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:10:51.035Z"
+    },
+    {
+      "id": "ev-1787400655866-j5g3xo",
+      "eventType": "page_view",
+      "page": "/admin/conversations",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:10:55.866Z"
+    },
+    {
+      "id": "ev-1787400668139-e6wmzd",
+      "eventType": "page_view",
+      "page": "/admin/live-chat",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:11:08.139Z"
+    },
+    {
+      "id": "ev-1787400685943-imwc08",
+      "eventType": "page_view",
+      "page": "/admin/conversations",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:11:25.943Z"
+    },
+    {
+      "id": "ev-1787400693492-px1e4z",
+      "eventType": "page_view",
+      "page": "/admin/leads",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:11:33.492Z"
+    },
+    {
+      "id": "ev-1787400715035-tt52ml",
+      "eventType": "page_view",
+      "page": "/admin/contact",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:11:55.035Z"
+    },
+    {
+      "id": "ev-1787400728853-zhtpjv",
+      "eventType": "page_view",
+      "page": "/admin/knowledge",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:12:08.853Z"
+    },
+    {
+      "id": "ev-1787400764692-n2mb1r",
+      "eventType": "page_view",
+      "page": "/admin/analytics",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:12:44.692Z"
+    },
+    {
+      "id": "ev-1787400770870-8d7tkp",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:12:50.870Z"
+    },
+    {
+      "id": "ev-1787400770882-6whg5i",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:12:50.882Z"
+    },
+    {
+      "id": "ev-1787400773194-d361l5",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:12:53.194Z"
+    },
+    {
+      "id": "ev-1787400777490-emil0y",
+      "eventType": "page_view",
+      "page": "/admin/settings",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:12:57.490Z"
+    },
+    {
+      "id": "ev-1787400814210-g39uzw",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:13:34.210Z"
+    },
+    {
+      "id": "ev-1787400838138-9l4qk8",
+      "eventType": "page_view",
+      "page": "/admin/live-chat",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:13:58.138Z"
+    },
+    {
+      "id": "ev-1787400842025-9rm824",
+      "eventType": "page_view",
+      "page": "/admin/conversations",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:14:02.025Z"
+    },
+    {
+      "id": "ev-1787400843562-6x57f3",
+      "eventType": "page_view",
+      "page": "/admin/live-chat",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:14:03.562Z"
+    },
+    {
+      "id": "ev-1787400849935-etd0nh",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:14:09.935Z"
+    },
+    {
+      "id": "ev-1787400849945-3q15ki",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:14:09.945Z"
+    },
+    {
+      "id": "ev-1787400906383-cz77vh",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:15:06.383Z"
+    },
+    {
+      "id": "ev-1787400906396-lk4tix",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:15:06.396Z"
+    },
+    {
+      "id": "ev-1787400925860-ys3uhh",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T12:15:25.860Z"
+    },
+    {
+      "id": "ev-1787400925936-ibezl2",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T12:15:25.936Z"
+    },
+    {
+      "id": "ev-1787400989278-ux5g7f",
+      "eventType": "page_view",
+      "page": "/admin/conversations",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:16:29.278Z"
+    },
+    {
+      "id": "ev-1787401161908-5o583u",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:19:21.908Z"
+    },
+    {
+      "id": "ev-1787401161943-9a0kkv",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:19:21.943Z"
+    },
+    {
+      "id": "ev-1787401165394-xdaj2f",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:19:25.394Z"
+    },
+    {
+      "id": "ev-1787401165410-hjn2um",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:19:25.410Z"
+    },
+    {
+      "id": "ev-1787401168558-pcbgsh",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:19:28.558Z"
+    },
+    {
+      "id": "ev-1787401168579-mq5ses",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:19:28.579Z"
+    },
+    {
+      "id": "ev-1787401672183-tnw1ir",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:27:52.183Z"
+    },
+    {
+      "id": "ev-1787401672195-uxh9c3",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:27:52.195Z"
+    },
+    {
+      "id": "ev-1787401672539-4a780n",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T12:27:52.539Z"
+    },
+    {
+      "id": "ev-1787401672571-6dk951",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T12:27:52.571Z"
+    },
+    {
+      "id": "ev-1787401673568-plfnla",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:27:53.568Z"
+    },
+    {
+      "id": "ev-1787401673608-pwujec",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:27:53.608Z"
+    },
+    {
+      "id": "ev-1787401694124-st2g9i",
+      "eventType": "page_view",
+      "page": "/solutions",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:28:14.124Z"
+    },
+    {
+      "id": "ev-1787401695178-m57eoi",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:28:15.178Z"
+    },
+    {
+      "id": "ev-1787401700710-jia140",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:28:20.710Z"
+    },
+    {
+      "id": "ev-1787401700730-ktdzpe",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:28:20.730Z"
+    },
+    {
+      "id": "ev-1787401704237-hf32ph",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:28:24.237Z"
+    },
+    {
+      "id": "ev-1787401704256-jf1yi9",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:28:24.256Z"
+    },
+    {
+      "id": "ev-1787402104404-rsrea5",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:35:04.404Z"
+    },
+    {
+      "id": "ev-1787402104437-3xqng9",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:35:04.437Z"
+    },
+    {
+      "id": "ev-1787402106962-eo0t61",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:35:06.962Z"
+    },
+    {
+      "id": "ev-1787402106987-yc8uk7",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:35:06.987Z"
+    },
+    {
+      "id": "ev-1787402118433-v0jjsv",
+      "eventType": "page_view",
+      "page": "/solutions",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:35:18.433Z"
+    },
+    {
+      "id": "ev-1787402153486-938lqb",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:35:53.486Z"
+    },
+    {
+      "id": "ev-1787402171144-6knkv4",
+      "eventType": "page_view",
+      "page": "/admin/analytics",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:36:11.144Z"
+    },
+    {
+      "id": "ev-1787402175220-xc1v1v",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:36:15.220Z"
+    },
+    {
+      "id": "ev-1787402175233-7c6qka",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:36:15.233Z"
+    },
+    {
+      "id": "ev-1787402179709-34ai3n",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:36:19.709Z"
+    },
+    {
+      "id": "ev-1787402179734-e6xxpq",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:36:19.734Z"
+    },
+    {
+      "id": "ev-1787402185224-x3ie6o",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:36:25.224Z"
+    },
+    {
+      "id": "ev-1787402192314-7un9an",
+      "eventType": "page_view",
+      "page": "/admin/analytics",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:36:32.314Z"
+    },
+    {
+      "id": "ev-1787402193921-qfw9ot",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:36:33.921Z"
+    },
+    {
+      "id": "ev-1787402193938-sgcm68",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:36:33.938Z"
+    },
+    {
+      "id": "ev-1787402196963-uyf0pi",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:36:36.963Z"
+    },
+    {
+      "id": "ev-1787402199596-mrwrtv",
+      "eventType": "page_view",
+      "page": "/admin/leads",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:36:39.596Z"
+    },
+    {
+      "id": "ev-1787402223830-p5mojo",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:37:03.830Z"
+    },
+    {
+      "id": "ev-1787402223847-zgvju0",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:37:03.847Z"
+    },
+    {
+      "id": "ev-1787402430039-8d9t9q",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:40:30.039Z"
+    },
+    {
+      "id": "ev-1787402430064-drwgei",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:40:30.064Z"
+    },
+    {
+      "id": "ev-1787402538810-og7l80",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:42:18.810Z"
+    },
+    {
+      "id": "ev-1787402538834-r22rg0",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:42:18.834Z"
+    },
+    {
+      "id": "ev-1787402542179-um3jb4",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:42:22.179Z"
+    },
+    {
+      "id": "ev-1787402542199-duiplh",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218711205_67t9y",
+      "timestamp": "2026-08-22T12:42:22.199Z"
+    },
+    {
+      "id": "ev-1787411296485-d742zt",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:08:16.485Z"
+    },
+    {
+      "id": "ev-1787411296497-jvagqn",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:08:16.498Z"
+    },
+    {
+      "id": "ev-1787411314214-lex1j2",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:08:34.214Z"
+    },
+    {
+      "id": "ev-1787411314240-wqkcjg",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:08:34.240Z"
+    },
+    {
+      "id": "ev-1787411332289-c2srsc",
+      "eventType": "page_view",
+      "page": "/solutions",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:08:52.289Z"
+    },
+    {
+      "id": "ev-1787411335131-utq6ed",
+      "eventType": "page_view",
+      "page": "/products",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:08:55.131Z"
+    },
+    {
+      "id": "ev-1787411336454-h3rn2t",
+      "eventType": "page_view",
+      "page": "/industries",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:08:56.454Z"
+    },
+    {
+      "id": "ev-1787411337628-ujh8fo",
+      "eventType": "page_view",
+      "page": "/about",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:08:57.628Z"
+    },
+    {
+      "id": "ev-1787411338761-8a2lf5",
+      "eventType": "page_view",
+      "page": "/contact",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:08:58.761Z"
+    },
+    {
+      "id": "ev-1787411340543-rqccxq",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:09:00.543Z"
+    },
+    {
+      "id": "ev-1787411365425-xu0l0r",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:09:25.426Z"
+    },
+    {
+      "id": "ev-1787411368971-a40tla",
+      "eventType": "page_view",
+      "page": "/admin/live-chat",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:09:28.971Z"
+    },
+    {
+      "id": "ev-1787411410339-taybyw",
+      "eventType": "page_view",
+      "page": "/admin/conversations",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:10:10.339Z"
+    },
+    {
+      "id": "ev-1787411415223-8nui3l",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:10:15.223Z"
+    },
+    {
+      "id": "ev-1787411437658-oz4njz",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:10:37.658Z"
+    },
+    {
+      "id": "ev-1787411437673-9y4q8y",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:10:37.673Z"
+    },
+    {
+      "id": "ev-1787411457532-9x7nvx",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:10:57.532Z"
+    },
+    {
+      "id": "ev-1787411457545-j7blmr",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:10:57.545Z"
+    },
+    {
+      "id": "ev-1787411466850-2mn2pm",
+      "eventType": "page_view",
+      "page": "/solutions",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:11:06.850Z"
+    },
+    {
+      "id": "ev-1787411489926-4bk2vx",
+      "eventType": "page_view",
+      "page": "/contact",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T15:11:29.926Z"
+    }
+  ],
+  "settings": {
+    "companyName": "AXION TECHNOLOGIES",
+    "tagline": "Engineering Intelligent Business.",
+    "supportEmail": "support@axiontech.com",
+    "salesEmail": "contact@axiontech.com",
+    "phone": "+234 1 800 AXION",
+    "offices": [
+      {
+        "city": "Lagos",
+        "country": "Nigeria",
+        "address": "Plot 14B, Victoria Island Tech Hub",
+        "phone": "+234 1 800 29466"
+      },
+      {
+        "city": "Riyadh",
+        "country": "Saudi Arabia",
+        "address": "King Fahd Road, Al-Olaya Business Tower",
+        "phone": "+966 11 800 2946"
+      },
+      {
+        "city": "London",
+        "country": "United Kingdom",
+        "address": "124 City Road, Tech City Hub",
+        "phone": "+44 20 7946 0991"
+      }
+    ],
+    "aiModel": "gemini-3.7-flash",
+    "aiTemperature": 0.3,
+    "businessHours": "Monday - Friday: 08:00 - 18:00 (GMT+1 / GMT+3)",
+    "autoHandoffKeywords": [
+      "human",
+      "person",
+      "talk to someone",
+      "speak with someone",
+      "agent",
+      "representative",
+      "contact someone",
+      "call me",
+      "urgent",
+      "quotation",
+      "quote",
+      "hire",
+      "pricing estimate",
+      "frustrated"
+    ],
+    "chatOnlineStatus": true,
+    "notificationSoundEnabled": true,
+    "leadAutoCapture": true
+  }
+}
