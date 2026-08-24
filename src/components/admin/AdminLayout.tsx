@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import {
   LayoutDashboard,
   MessageSquare,
@@ -20,10 +20,21 @@ import {
   CheckCircle,
   Clock,
   Sparkles,
-} from 'lucide-react';
-import type { AdminUser, AdminNotification, Conversation } from '../../types/index.js';
-import { getNotifications, markNotificationRead, markAllNotificationsRead, clearAllNotifications, getAdminConversations } from '../../lib/api.js';
-import { realtime } from '../../lib/ws.js';
+} from "lucide-react";
+import type {
+  AdminUser,
+  AdminNotification,
+  Conversation,
+} from "../../types/index.js";
+import {
+  getNotifications,
+  markNotificationRead,
+  markAllNotificationsRead,
+  clearAllNotifications,
+  getAdminConversations,
+} from "../../lib/api.js";
+import { realtime } from "../../lib/ws.js";
+import { AxionLogo } from "../public/AxionLogo.js";
 
 interface AdminLayoutProps {
   currentTab: string;
@@ -59,7 +70,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
   // notification handler always reads the latest value without reconnecting WS.
   useEffect(() => {
     // Connect WebSocket as admin
-    realtime.connect('admin', { adminId: adminUser.id });
+    realtime.connect("admin", { adminId: adminUser.id });
 
     const loadData = async () => {
       try {
@@ -67,47 +78,60 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
         setNotifications(notifRes.notifications || []);
 
         const convRes = await getAdminConversations();
-        const pending = (convRes.conversations || []).filter((c) => c.status === 'human_requested').length;
+        const pending = (convRes.conversations || []).filter(
+          (c) => c.status === "human_requested",
+        ).length;
         setPendingHandoffCount(pending);
       } catch (e) {
-        console.error('Error loading admin notifications:', e);
+        console.error("Error loading admin notifications:", e);
       }
     };
 
     loadData();
 
     // Listen for incoming notifications and live chat events
-    const unsubNotif = realtime.on('new_notification', (data: { notification: AdminNotification }) => {
-      if (data.notification) {
-        setNotifications((prev) => [data.notification, ...prev]);
-        // Use ref so we read latest soundEnabled value without re-subscribing
-        if (soundEnabledRef.current) {
-          try {
-            const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
-            const osc = ctx.createOscillator();
-            const gain = ctx.createGain();
-            osc.connect(gain);
-            gain.connect(ctx.destination);
-            osc.frequency.setValueAtTime(587.33, ctx.currentTime); // D5
-            osc.frequency.setValueAtTime(880, ctx.currentTime + 0.1); // A5
-            gain.gain.setValueAtTime(0.15, ctx.currentTime);
-            gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
-            osc.start();
-            osc.stop(ctx.currentTime + 0.3);
-          } catch {}
+    const unsubNotif = realtime.on(
+      "new_notification",
+      (data: { notification: AdminNotification }) => {
+        if (data.notification) {
+          setNotifications((prev) => [data.notification, ...prev]);
+          // Use ref so we read latest soundEnabled value without re-subscribing
+          if (soundEnabledRef.current) {
+            try {
+              const ctx = new (
+                window.AudioContext || (window as any).webkitAudioContext
+              )();
+              const osc = ctx.createOscillator();
+              const gain = ctx.createGain();
+              osc.connect(gain);
+              gain.connect(ctx.destination);
+              osc.frequency.setValueAtTime(587.33, ctx.currentTime); // D5
+              osc.frequency.setValueAtTime(880, ctx.currentTime + 0.1); // A5
+              gain.gain.setValueAtTime(0.15, ctx.currentTime);
+              gain.gain.exponentialRampToValueAtTime(
+                0.01,
+                ctx.currentTime + 0.3,
+              );
+              osc.start();
+              osc.stop(ctx.currentTime + 0.3);
+            } catch {}
+          }
         }
-      }
-    });
+      },
+    );
 
-    const unsubHandoff = realtime.on('human_handoff_requested', () => {
+    const unsubHandoff = realtime.on("human_handoff_requested", () => {
       setPendingHandoffCount((prev) => prev + 1);
     });
 
-    const unsubStatus = realtime.on('status_change', (data: { status: string }) => {
-      if (data.status === 'human_active' || data.status === 'closed') {
-        setPendingHandoffCount((prev) => Math.max(0, prev - 1));
-      }
-    });
+    const unsubStatus = realtime.on(
+      "status_change",
+      (data: { status: string }) => {
+        if (data.status === "human_active" || data.status === "closed") {
+          setPendingHandoffCount((prev) => Math.max(0, prev - 1));
+        }
+      },
+    );
 
     return () => {
       unsubNotif();
@@ -116,7 +140,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
       // Disconnect WS when admin unmounts (logs out)
       realtime.disconnect();
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminUser.id]); // Only reconnect if admin identity changes, NOT on every state change
 
   const unreadCount = notifications.filter((n) => !n.isRead).length;
@@ -140,59 +164,93 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
   };
 
   const navItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'live-chat', label: 'Live Chat Queue', icon: MessageSquare, badge: pendingHandoffCount > 0 ? pendingHandoffCount : undefined, badgeColor: 'bg-red-500' },
-    { id: 'conversations', label: 'Conversations & Logs', icon: History },
-    { id: 'leads', label: 'Leads CRM', icon: Users },
-    { id: 'contact', label: 'Contact Messages', icon: Inbox },
-    { id: 'knowledge', label: 'AI Knowledge Base', icon: BookOpen },
-    { id: 'analytics', label: 'Analytics & Reports', icon: BarChart2 },
-    { id: 'settings', label: 'System Settings', icon: Settings },
+    { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
+    {
+      id: "live-chat",
+      label: "Live Chat Queue",
+      icon: MessageSquare,
+      badge: pendingHandoffCount > 0 ? pendingHandoffCount : undefined,
+      badgeColor: "bg-red-500",
+    },
+    { id: "conversations", label: "Conversations & Logs", icon: History },
+    { id: "leads", label: "Leads CRM", icon: Users },
+    { id: "contact", label: "Contact Messages", icon: Inbox },
+    { id: "knowledge", label: "AI Knowledge Base", icon: BookOpen },
+    { id: "analytics", label: "Analytics & Reports", icon: BarChart2 },
+    { id: "settings", label: "System Settings", icon: Settings },
   ];
+
+  function onNavigate(arg0: string): void {
+    throw new Error("Function not implemented.");
+  }
 
   return (
     <div className="min-h-screen bg-[#07101F] text-slate-200 flex flex-col md:flex-row">
       {/* Mobile Top Bar */}
       <div className="md:hidden bg-[#0F1D32] border-b border-slate-800 p-4 flex items-center justify-between z-30">
         <div className="flex items-center gap-2">
-          <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-1.5 text-slate-300">
-            {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="p-1.5 text-slate-300"
+          >
+            {sidebarOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
-          <span className="font-extrabold text-sm text-white tracking-wider">AXION OS</span>
+          <span className="font-extrabold text-sm text-white tracking-wider"></span>
         </div>
         <div className="flex items-center gap-3">
-          <button onClick={() => setShowNotifications(!showNotifications)} className="relative p-1.5 text-slate-300">
+          <button
+            onClick={() => setShowNotifications(!showNotifications)}
+            className="relative p-1.5 text-slate-300"
+          >
             <Bell className="w-5 h-5" />
             {unreadCount > 0 && (
               <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-red-500" />
             )}
           </button>
-          <button onClick={onBackToSite} className="text-xs text-[#46DCDC]">Public Site</button>
+          <button onClick={onBackToSite} className="text-xs text-[#46DCDC]">
+            Public Site
+          </button>
         </div>
       </div>
 
       {/* Sidebar Navigation */}
       <aside
         className={`fixed md:static inset-y-0 left-0 z-40 w-64 bg-[#0F1D32] border-r border-slate-800 flex flex-col justify-between transition-transform duration-200 ${
-          sidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
+          sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         }`}
       >
         {/* Sidebar Top: Brand */}
         <div className="p-5 border-b border-slate-800/80">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#2D96FF] to-[#46DCDC] p-[1.5px] shadow-[0_0_15px_rgba(45,150,255,0.3)]">
-              <div className="w-full h-full bg-[#07101F] rounded-[9px] flex items-center justify-center font-bold text-sm text-[#46DCDC]">
-                AX
+            <div
+              id="axion-brand-logo"
+              className="flex items-center gap-3 cursor-pointer shrink-0"
+              onClick={() => onNavigate("home")}
+              role="button"
+              aria-label="Axion Technologies Ltd. Home"
+            >
+              {/* Desktop Logo Height: 44px */}
+              <div className="hidden sm:block">
+                <AxionLogo
+                  logoSize={44}
+                  isDarkMode={true}
+                  glow={true}
+                  interactive={true}
+                />
               </div>
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-black text-sm text-white tracking-wider">AXION OS</span>
-                <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 px-1 py-0.2 rounded border border-emerald-800">
-                  LIVE
-                </span>
+              {/* Mobile Logo Height: 36px */}
+              <div className="block sm:hidden">
+                <AxionLogo
+                  logoSize={36}
+                  isDarkMode={true}
+                  glow={true}
+                  interactive={true}
+                />
               </div>
-              <p className="text-[11px] text-slate-400 font-mono">Enterprise Control</p>
             </div>
           </div>
         </div>
@@ -212,8 +270,8 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
                 }}
                 className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold tracking-wide transition-all ${
                   isActive
-                    ? 'bg-[#2D96FF] text-white shadow-[0_0_12px_rgba(45,150,255,0.35)]'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+                    ? "bg-[#2D96FF] text-white shadow-[0_0_12px_rgba(45,150,255,0.35)]"
+                    : "text-slate-300 hover:text-white hover:bg-slate-800/60"
                 }`}
               >
                 <div className="flex items-center gap-3">
@@ -223,7 +281,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
                 {item.badge !== undefined && (
                   <span
                     className={`px-1.5 py-0.5 rounded-full text-[10px] font-bold text-white ${
-                      item.badgeColor || 'bg-[#2D96FF]'
+                      item.badgeColor || "bg-[#2D96FF]"
                     }`}
                   >
                     {item.badge}
@@ -242,16 +300,24 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
                 {adminUser.name.charAt(0)}
               </div>
               <div className="overflow-hidden">
-                <p className="text-xs font-bold text-white truncate">{adminUser.name}</p>
-                <p className="text-[10px] text-slate-400 uppercase tracking-tight">{adminUser.role}</p>
+                <p className="text-xs font-bold text-white truncate">
+                  {adminUser.name}
+                </p>
+                <p className="text-[10px] text-slate-400 uppercase tracking-tight">
+                  {adminUser.role}
+                </p>
               </div>
             </div>
             <button
               onClick={() => setSoundEnabled(!soundEnabled)}
-              title={soundEnabled ? 'Mute alert chime' : 'Enable alert chime'}
+              title={soundEnabled ? "Mute alert chime" : "Enable alert chime"}
               className="p-1.5 text-slate-400 hover:text-white"
             >
-              {soundEnabled ? <Volume2 className="w-4 h-4 text-[#46DCDC]" /> : <VolumeX className="w-4 h-4" />}
+              {soundEnabled ? (
+                <Volume2 className="w-4 h-4 text-[#46DCDC]" />
+              ) : (
+                <VolumeX className="w-4 h-4" />
+              )}
             </button>
           </div>
 
@@ -281,10 +347,12 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
         <header className="hidden md:flex items-center justify-between h-16 px-8 bg-[#0F1D32]/50 border-b border-slate-800/80 backdrop-blur-md">
           <div className="flex items-center gap-3">
             <h1 className="text-base font-bold text-white tracking-wide capitalize">
-              {currentTab.replace('-', ' ')}
+              {currentTab.replace("-", " ")}
             </h1>
             <span className="text-xs font-mono text-slate-500">•</span>
-            <span className="text-xs text-slate-400">Enterprise Administration Platform</span>
+            <span className="text-xs text-slate-400">
+              Enterprise Administration Platform
+            </span>
           </div>
 
           <div className="flex items-center gap-4">
@@ -307,12 +375,20 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
               {showNotifications && (
                 <div className="absolute right-0 mt-2 w-80 rounded-2xl bg-[#0F1D32] border border-slate-700 shadow-2xl z-50 overflow-hidden animate-in fade-in zoom-in-95 duration-100">
                   <div className="p-3 bg-[#07101F] border-b border-slate-800 flex items-center justify-between text-xs">
-                    <span className="font-bold text-white">Live Activity Feed</span>
+                    <span className="font-bold text-white">
+                      Live Activity Feed
+                    </span>
                     <div className="flex items-center gap-2">
-                      <button onClick={handleMarkAllRead} className="text-[#2D96FF] hover:underline text-[11px]">
+                      <button
+                        onClick={handleMarkAllRead}
+                        className="text-[#2D96FF] hover:underline text-[11px]"
+                      >
                         Mark read
                       </button>
-                      <button onClick={handleClearAll} className="text-slate-400 hover:underline text-[11px]">
+                      <button
+                        onClick={handleClearAll}
+                        className="text-slate-400 hover:underline text-[11px]"
+                      >
                         Clear
                       </button>
                     </div>
@@ -320,22 +396,31 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
 
                   <div className="max-h-72 overflow-y-auto divide-y divide-slate-800 text-xs">
                     {notifications.length === 0 ? (
-                      <div className="p-6 text-center text-slate-500 text-xs">No active notifications</div>
+                      <div className="p-6 text-center text-slate-500 text-xs">
+                        No active notifications
+                      </div>
                     ) : (
                       notifications.slice(0, 10).map((n) => (
                         <div
                           key={n.id}
                           className={`p-3 space-y-1 hover:bg-slate-800/50 transition-colors ${
-                            !n.isRead ? 'bg-[#2D96FF]/10' : ''
+                            !n.isRead ? "bg-[#2D96FF]/10" : ""
                           }`}
                         >
                           <div className="flex items-center justify-between text-[11px]">
-                            <span className="font-bold text-white">{n.title}</span>
+                            <span className="font-bold text-white">
+                              {n.title}
+                            </span>
                             <span className="text-slate-500 font-mono text-[10px]">
-                              {new Date(n.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                              {new Date(n.createdAt).toLocaleTimeString([], {
+                                hour: "2-digit",
+                                minute: "2-digit",
+                              })}
                             </span>
                           </div>
-                          <p className="text-slate-300 text-[11px] leading-snug">{n.message}</p>
+                          <p className="text-slate-300 text-[11px] leading-snug">
+                            {n.message}
+                          </p>
                         </div>
                       ))
                     )}

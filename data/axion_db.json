@@ -23,15 +23,15 @@
     {
       "visitorId": "v_1787218773351_l2tui",
       "visitorName": "dfk'b",
-      "status": "WAITING",
+      "status": "HUMAN_REQUESTED",
       "priority": "HIGH",
       "pageUrl": "/",
       "id": "conv-1787400925786-rmxzc7",
       "createdAt": "2026-08-22T12:15:25.786Z",
-      "updatedAt": "2026-08-22T15:12:29.012Z",
+      "updatedAt": "2026-08-22T16:48:57.724Z",
       "unreadAdminCount": 0,
       "unreadVisitorCount": 0,
-      "lastMessage": "Contact details received for dfk'b (ldkfdb@gmm.com). An Axion consultant will follow up shortly.",
+      "lastMessage": "An Axion team member has been alerted and will join the conversation shortly.",
       "assignedAdminId": "admin-1",
       "assignedAdminName": "Abdullahi Abubakar",
       "handoffReason": "Visitor clicked Talk to Human",
@@ -66,7 +66,7 @@
       "pageUrl": "/solutions/wms",
       "handoffReason": "Inquiring about multi-depot WMS with SAP Business One real-time sync.",
       "createdAt": "2026-08-22T10:08:17.193Z",
-      "updatedAt": "2026-08-22T12:16:26.031Z",
+      "updatedAt": "2026-08-22T16:49:52.137Z",
       "unreadAdminCount": 0,
       "unreadVisitorCount": 0,
       "lastMessage": "Can someone from the technical team advise if Axion WMS supports offline barcoding in warehouses with intermittent internet?"
@@ -249,9 +249,59 @@
       "content": "Contact details received for dfk'b (ldkfdb@gmm.com). An Axion consultant will follow up shortly.",
       "id": "msg-1787411549012-jh8ej7",
       "createdAt": "2026-08-22T15:12:29.012Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "system",
+      "senderName": "System",
+      "content": "An Axion team member has been alerted and will join the conversation shortly.",
+      "id": "msg-1787417336207-zgp5ki",
+      "createdAt": "2026-08-22T16:48:56.207Z"
+    },
+    {
+      "conversationId": "conv-1787400925786-rmxzc7",
+      "senderRole": "system",
+      "senderName": "System",
+      "content": "An Axion team member has been alerted and will join the conversation shortly.",
+      "id": "msg-1787417337724-pnawry",
+      "createdAt": "2026-08-22T16:48:57.724Z"
     }
   ],
   "leads": [
+    {
+      "name": "Mustafa Al-Zahrani",
+      "company": "Eastern Province Cold Chain Co.",
+      "email": "mustafa@epcoldchain.sa",
+      "phone": "+966 54 888 2233",
+      "country": "Saudi Arabia",
+      "industry": "Warehousing & Distribution",
+      "source": "contact_form",
+      "interest": "Warehouse Management",
+      "status": "QUALIFIED",
+      "priority": "HIGH",
+      "notes": "Converted from contact message: \"Looking for a multi-temperature cold storage warehouse management system with IoT sensor integration and automated dispatch routing.\"",
+      "contactMessageId": "contact-2",
+      "id": "lead-1787416887807-wyf3nw",
+      "createdAt": "2026-08-22T16:41:27.807Z",
+      "updatedAt": "2026-08-22T16:41:27.807Z"
+    },
+    {
+      "name": "Mustafa Al-Zahrani",
+      "company": "Eastern Province Cold Chain Co.",
+      "email": "mustafa@epcoldchain.sa",
+      "phone": "+966 54 888 2233",
+      "country": "Saudi Arabia",
+      "industry": "Warehousing & Distribution",
+      "source": "contact_form",
+      "interest": "Warehouse Management",
+      "status": "QUALIFIED",
+      "priority": "HIGH",
+      "notes": "Converted from contact message: \"Looking for a multi-temperature cold storage warehouse management system with IoT sensor integration and automated dispatch routing.\"",
+      "contactMessageId": "contact-2",
+      "id": "lead-1787416886314-sfcsv1",
+      "createdAt": "2026-08-22T16:41:26.313Z",
+      "updatedAt": "2026-08-22T16:41:26.313Z"
+    },
     {
       "name": "dfk'b",
       "company": "ihoihoh",
@@ -362,9 +412,10 @@
       "industry": "Warehousing & Distribution",
       "serviceInterest": "Warehouse Management",
       "message": "Looking for a multi-temperature cold storage warehouse management system with IoT sensor integration and automated dispatch routing.",
-      "status": "NEW",
+      "status": "CONVERTED",
       "createdAt": "2026-08-22T08:08:17.194Z",
-      "updatedAt": "2026-08-22T08:08:17.194Z"
+      "updatedAt": "2026-08-22T16:41:27.811Z",
+      "leadId": "lead-1787416887807-wyf3nw"
     },
     {
       "id": "contact-3",
@@ -926,6 +977,30 @@
     }
   ],
   "notifications": [
+    {
+      "type": "human_handoff",
+      "title": "Human Specialist Requested",
+      "message": "dfk'b clicked \"Talk to a Human\".",
+      "link": "/admin/live-chat?conv=conv-1787400925786-rmxzc7",
+      "metadata": {
+        "conversationId": "conv-1787400925786-rmxzc7"
+      },
+      "id": "notif-1787417337728-fvrx8h",
+      "read": false,
+      "createdAt": "2026-08-22T16:48:57.728Z"
+    },
+    {
+      "type": "human_handoff",
+      "title": "Human Specialist Requested",
+      "message": "dfk'b clicked \"Talk to a Human\".",
+      "link": "/admin/live-chat?conv=conv-1787400925786-rmxzc7",
+      "metadata": {
+        "conversationId": "conv-1787400925786-rmxzc7"
+      },
+      "id": "notif-1787417336211-i44tcx",
+      "read": false,
+      "createdAt": "2026-08-22T16:48:56.211Z"
+    },
     {
       "type": "new_lead",
       "title": "New Lead Captured (Offline Chat)",
@@ -1618,11 +1693,298 @@
       "page": "/contact",
       "visitorId": "v_1787218773351_l2tui",
       "timestamp": "2026-08-22T15:11:29.926Z"
+    },
+    {
+      "id": "ev-1787416233838-any31j",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:30:33.838Z"
+    },
+    {
+      "id": "ev-1787416233850-r0l5bn",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:30:33.850Z"
+    },
+    {
+      "id": "ev-1787416238636-jsefxx",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:30:38.636Z"
+    },
+    {
+      "id": "ev-1787416238650-amqbgd",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:30:38.650Z"
+    },
+    {
+      "id": "ev-1787416242370-3wcpqa",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:30:42.370Z"
+    },
+    {
+      "id": "ev-1787416242383-2hv97p",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:30:42.383Z"
+    },
+    {
+      "id": "ev-1787416254042-xcso0o",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:30:54.042Z"
+    },
+    {
+      "id": "ev-1787416641793-5pbz3u",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:37:21.793Z"
+    },
+    {
+      "id": "ev-1787416641804-ktc5si",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:37:21.804Z"
+    },
+    {
+      "id": "ev-1787416645680-7vyz6y",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:37:25.680Z"
+    },
+    {
+      "id": "ev-1787416833483-easvgh",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:40:33.483Z"
+    },
+    {
+      "id": "ev-1787416833500-3i3rl1",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:40:33.500Z"
+    },
+    {
+      "id": "ev-1787416839398-62pqkh",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:40:39.398Z"
+    },
+    {
+      "id": "ev-1787416849307-chk50m",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:40:49.307Z"
+    },
+    {
+      "id": "ev-1787416849319-mwrurb",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:40:49.319Z"
+    },
+    {
+      "id": "ev-1787416854181-i8s8c4",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:40:54.181Z"
+    },
+    {
+      "id": "ev-1787416860723-z9gfyy",
+      "eventType": "page_view",
+      "page": "/admin/live-chat",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:41:00.723Z"
+    },
+    {
+      "id": "ev-1787416863090-969fzz",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:41:03.090Z"
+    },
+    {
+      "id": "ev-1787416865310-nv0tvf",
+      "eventType": "page_view",
+      "page": "/admin/leads",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:41:05.310Z"
+    },
+    {
+      "id": "ev-1787416869122-5dnhmn",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:41:09.123Z"
+    },
+    {
+      "id": "ev-1787416872272-2ueilv",
+      "eventType": "page_view",
+      "page": "/admin/contact",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:41:12.272Z"
+    },
+    {
+      "id": "ev-1787416893608-99e5lu",
+      "eventType": "page_view",
+      "page": "/admin/knowledge",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:41:33.608Z"
+    },
+    {
+      "id": "ev-1787416900506-x4bg3f",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:41:40.506Z"
+    },
+    {
+      "id": "ev-1787416910171-u0gyus",
+      "eventType": "page_view",
+      "page": "/admin/analytics",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:41:50.171Z"
+    },
+    {
+      "id": "ev-1787416916244-rebgxd",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:41:56.244Z"
+    },
+    {
+      "id": "ev-1787416916255-fdruyo",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:41:56.255Z"
+    },
+    {
+      "id": "ev-1787416924856-xqn9qe",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:42:04.857Z"
+    },
+    {
+      "id": "ev-1787417077813-t4daw4",
+      "eventType": "page_view",
+      "page": "/admin/live-chat",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:44:37.813Z"
+    },
+    {
+      "id": "ev-1787417079324-uk62qq",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:44:39.324Z"
+    },
+    {
+      "id": "ev-1787417272141-585k9r",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:47:52.141Z"
+    },
+    {
+      "id": "ev-1787417274937-kizup3",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:47:54.937Z"
+    },
+    {
+      "id": "ev-1787417286089-zsv4tt",
+      "eventType": "page_view",
+      "page": "/admin/live-chat",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:48:06.089Z"
+    },
+    {
+      "id": "ev-1787417290649-wmrzb7",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:48:10.649Z"
+    },
+    {
+      "id": "ev-1787417373575-izqf31",
+      "eventType": "page_view",
+      "page": "/contact",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:49:33.575Z"
+    },
+    {
+      "id": "ev-1787417386465-4vt05a",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:49:46.465Z"
+    },
+    {
+      "id": "ev-1787417388649-kb6mu2",
+      "eventType": "page_view",
+      "page": "/solutions",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:49:48.649Z"
+    },
+    {
+      "id": "ev-1787417390080-mq6pzc",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:49:50.080Z"
+    },
+    {
+      "id": "ev-1787417392112-osqh8k",
+      "eventType": "page_view",
+      "page": "/admin/live-chat",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:49:52.112Z"
+    },
+    {
+      "id": "ev-1787417402218-u3gzwb",
+      "eventType": "page_view",
+      "page": "/admin/settings",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:50:02.218Z"
+    },
+    {
+      "id": "ev-1787417404389-trc2jk",
+      "eventType": "page_view",
+      "page": "/admin/dashboard",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:50:04.389Z"
+    },
+    {
+      "id": "ev-1787417440961-6yosog",
+      "eventType": "page_view",
+      "page": "/home",
+      "visitorId": "v_1787218773351_l2tui",
+      "timestamp": "2026-08-22T16:50:40.961Z"
     }
   ],
   "settings": {
     "companyName": "AXION TECHNOLOGIES",
-    "tagline": "Engineering Intelligent Business.",
+    "tagline": "Transforming Businesses Through Intelligent Technology",
     "supportEmail": "support@axiontech.com",
     "salesEmail": "contact@axiontech.com",
     "phone": "+234 1 800 AXION",

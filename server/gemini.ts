@@ -1,5 +1,5 @@
-import { GoogleGenAI } from '@google/genai';
-import { db } from './db.js';
+import { GoogleGenAI } from "@google/genai";
+import { db } from "./db.js";
 
 let aiClient: GoogleGenAI | null = null;
 
@@ -9,7 +9,7 @@ function getGenAI(): GoogleGenAI | null {
       apiKey: process.env.GEMINI_API_KEY,
       httpOptions: {
         headers: {
-          'User-Agent': 'aistudio-build',
+          "User-Agent": "aistudio-build",
         },
       },
     });
@@ -17,38 +17,41 @@ function getGenAI(): GoogleGenAI | null {
   return aiClient;
 }
 
-export function detectHandoffIntent(userMessage: string, historyLength: number): { isHandoff: boolean; reason: string } {
+export function detectHandoffIntent(
+  userMessage: string,
+  historyLength: number,
+): { isHandoff: boolean; reason: string } {
   const lower = userMessage.toLowerCase().trim();
   const settings = db.getSettings();
   const customKeywords = settings.autoHandoffKeywords || [];
 
   const handoffPhrases = [
-    'human',
-    'person',
-    'talk to a human',
-    'speak with someone',
-    'speak to someone',
-    'talk to someone',
-    'i want to speak',
-    'i want to talk',
-    'i need a person',
-    'i need someone',
-    'i want to contact axion',
-    'can someone help me',
-    'representative',
-    'agent',
-    'specialist',
-    'consultant',
-    'call me',
-    'pricing estimate',
-    'quotation',
-    'quote for',
-    'become a client',
-    'schedule a meeting',
-    'schedule a call',
-    'frustrated',
-    'useless',
-    'stop bot',
+    "human",
+    "person",
+    "talk to a human",
+    "speak with someone",
+    "speak to someone",
+    "talk to someone",
+    "i want to speak",
+    "i want to talk",
+    "i need a person",
+    "i need someone",
+    "i want to contact axion",
+    "can someone help me",
+    "representative",
+    "agent",
+    "specialist",
+    "consultant",
+    "call me",
+    "pricing estimate",
+    "quotation",
+    "quote for",
+    "become a client",
+    "schedule a meeting",
+    "schedule a call",
+    "frustrated",
+    "useless",
+    "stop bot",
     ...customKeywords.map((k) => k.toLowerCase()),
   ];
 
@@ -62,20 +65,27 @@ export function detectHandoffIntent(userMessage: string, historyLength: number):
   }
 
   // After 6 messages if user seems asking for custom implementation
-  if (historyLength >= 6 && (lower.includes('price') || lower.includes('cost') || lower.includes('contract') || lower.includes('timeline'))) {
+  if (
+    historyLength >= 6 &&
+    (lower.includes("price") ||
+      lower.includes("cost") ||
+      lower.includes("contract") ||
+      lower.includes("timeline"))
+  ) {
     return {
       isHandoff: true,
-      reason: 'Extended conversation requiring customized commercial quotation.',
+      reason:
+        "Extended conversation requiring customized commercial quotation.",
     };
   }
 
-  return { isHandoff: false, reason: '' };
+  return { isHandoff: false, reason: "" };
 }
 
 export async function generateAIResponse(
   conversationId: string,
   userMessage: string,
-  history: { role: string; content: string }[]
+  history: { role: string; content: string }[],
 ): Promise<string> {
   const settings = db.getSettings();
   const knowledgeEntries = db.getKnowledgeBase(true);
@@ -84,25 +94,31 @@ export async function generateAIResponse(
   const industries = db.getIndustries();
 
   const knowledgeContext = knowledgeEntries
-    .map((k) => `[Category: ${k.category}] Title: ${k.title}\nContent: ${k.content}`)
-    .join('\n\n');
+    .map(
+      (k) =>
+        `[Category: ${k.category}] Title: ${k.title}\nContent: ${k.content}`,
+    )
+    .join("\n\n");
 
   const productsContext = products
     .map(
       (p) =>
         `Product: ${p.name} (${p.code}) - Status: ${p.status}\nTagline: ${p.tagline}\nDescription: ${p.description}\nFeatures: ${p.features.join(
-          ', '
-        )}`
+          ", ",
+        )}`,
     )
-    .join('\n\n');
+    .join("\n\n");
 
   const servicesContext = services
-    .map((s) => `Service: ${s.name}\nSummary: ${s.shortDesc}\nCapabilities: ${s.capabilities.join(', ')}`)
-    .join('\n\n');
+    .map(
+      (s) =>
+        `Service: ${s.name}\nSummary: ${s.shortDesc}\nCapabilities: ${s.capabilities.join(", ")}`,
+    )
+    .join("\n\n");
 
   const systemInstruction = `
 You are Axion AI, the enterprise intelligence representative for AXION TECHNOLOGIES.
-Tagline: "Engineering Intelligent Business."
+Tagline: "Transforming Businesses Through Intelligent Technology"
 Target Markets: Nigeria, Africa, Saudi Arabia, and International.
 
 CORE KNOWLEDGE BASE (Strictly adhere to this information. Do NOT invent fake client names, fictitious employee numbers, or unsupported claims):
@@ -129,29 +145,34 @@ BEHAVIOR RULES:
   const ai = getGenAI();
   if (!ai) {
     // Grounded fallback if Gemini key is not yet set in environment
-    return getFallbackKnowledgeResponse(userMessage, knowledgeEntries, products, services);
+    return getFallbackKnowledgeResponse(
+      userMessage,
+      knowledgeEntries,
+      products,
+      services,
+    );
   }
 
   try {
     const formattedContents: any[] = [];
-    
+
     // Add recent history for conversational context (up to last 6 turns)
     const recentHistory = history.slice(-6);
     for (const h of recentHistory) {
       formattedContents.push({
-        role: h.role === 'visitor' ? 'user' : 'model',
+        role: h.role === "visitor" ? "user" : "model",
         parts: [{ text: h.content }],
       });
     }
 
     // Add current user prompt
     formattedContents.push({
-      role: 'user',
+      role: "user",
       parts: [{ text: userMessage }],
     });
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3.7-flash',
+      model: "gemini-3.7-flash",
       contents: formattedContents,
       config: {
         systemInstruction,
@@ -164,37 +185,69 @@ BEHAVIOR RULES:
       return text.trim();
     }
   } catch (error) {
-    console.error('Gemini API invocation error, using grounded fallback:', error);
+    console.error(
+      "Gemini API invocation error, using grounded fallback:",
+      error,
+    );
   }
 
-  return getFallbackKnowledgeResponse(userMessage, knowledgeEntries, products, services);
+  return getFallbackKnowledgeResponse(
+    userMessage,
+    knowledgeEntries,
+    products,
+    services,
+  );
 }
 
-function getFallbackKnowledgeResponse(query: string, kb: any[], products: any[], services: any[]): string {
+function getFallbackKnowledgeResponse(
+  query: string,
+  kb: any[],
+  products: any[],
+  services: any[],
+): string {
   const lower = query.toLowerCase();
 
-  if (lower.includes('what does axion do') || lower.includes('about axion') || lower.includes('who are you') || lower.includes('who is axion')) {
-    return 'Axion Technologies is an enterprise technology engineering company focused on AI & Intelligent Automation, SAP Business One & ERP Integrations, Custom Enterprise Software, Axion Warehouse Management Systems (WMS), and Data/BI Intelligence. We operate across Nigeria, Africa, Saudi Arabia, and international markets.';
+  if (
+    lower.includes("what does axion do") ||
+    lower.includes("about axion") ||
+    lower.includes("who are you") ||
+    lower.includes("who is axion")
+  ) {
+    return "Axion Technologies is an enterprise technology engineering company focused on AI & Intelligent Automation, SAP Business One & ERP Integrations, Custom Enterprise Software, Axion Warehouse Management Systems (WMS), and Data/BI Intelligence. We operate across Nigeria, Africa, Saudi Arabia, and international markets.";
   }
 
-  if (lower.includes('wms') || lower.includes('warehouse') || lower.includes('inventory')) {
-    return 'Axion WMS is our production-ready Warehouse Management System engineered for high-throughput distribution centers and manufacturing plants. It supports multi-site inventory, handheld barcode/RFID scanning, offline warehouse sync, and real-time two-way integration with SAP Business One.';
+  if (
+    lower.includes("wms") ||
+    lower.includes("warehouse") ||
+    lower.includes("inventory")
+  ) {
+    return "Axion WMS is our production-ready Warehouse Management System engineered for high-throughput distribution centers and manufacturing plants. It supports multi-site inventory, handheld barcode/RFID scanning, offline warehouse sync, and real-time two-way integration with SAP Business One.";
   }
 
-  if (lower.includes('sap') || lower.includes('erp')) {
-    return 'Axion specializes in SAP Business One implementations, custom service layer extensions, legacy ERP database connectors, and automated financial/reconciliation pipelines.';
+  if (lower.includes("sap") || lower.includes("erp")) {
+    return "Axion specializes in SAP Business One implementations, custom service layer extensions, legacy ERP database connectors, and automated financial/reconciliation pipelines.";
   }
 
-  if (lower.includes('vault')) {
-    return 'Axion Vault is our enterprise document and knowledge management suite currently in development, designed for automated compliance verification, project documentation, and semantic neural search.';
+  if (lower.includes("vault")) {
+    return "Axion Vault is our enterprise document and knowledge management suite currently in development, designed for automated compliance verification, project documentation, and semantic neural search.";
   }
 
-  if (lower.includes('ai') || lower.includes('agent') || lower.includes('ocr')) {
-    return 'Our AI solutions include autonomous task agents, intelligent OCR for invoice and airway bill parsing, conversational assistants, and bilingual Arabic/English document processing.';
+  if (
+    lower.includes("ai") ||
+    lower.includes("agent") ||
+    lower.includes("ocr")
+  ) {
+    return "Our AI solutions include autonomous task agents, intelligent OCR for invoice and airway bill parsing, conversational assistants, and bilingual Arabic/English document processing.";
   }
 
-  if (lower.includes('office') || lower.includes('location') || lower.includes('contact') || lower.includes('phone') || lower.includes('email')) {
-    return 'Axion Technologies has operational offices in Lagos (Victoria Island, Nigeria), Riyadh (King Fahd Road, Saudi Arabia), and London (UK). You can reach our team at contact@axiontech.com or submit an inquiry through our Contact page.';
+  if (
+    lower.includes("office") ||
+    lower.includes("location") ||
+    lower.includes("contact") ||
+    lower.includes("phone") ||
+    lower.includes("email")
+  ) {
+    return "Axion Technologies has operational offices in Lagos (Victoria Island, Nigeria), Riyadh (King Fahd Road, Saudi Arabia), and London (UK). You can reach our team at contact@axiontech.com or submit an inquiry through our Contact page.";
   }
 
   // Matching with KB keywords
@@ -204,5 +257,5 @@ function getFallbackKnowledgeResponse(query: string, kb: any[], products: any[],
     }
   }
 
-  return 'Axion Technologies engineers intelligent enterprise systems including AI Agents, SAP & ERP integrations, Axion WMS, and bespoke software. How can we assist your business operations today? You can also request a human specialist at any time.';
+  return "Axion Technologies engineers intelligent enterprise systems including AI Agents, SAP & ERP integrations, Axion WMS, and bespoke software. How can we assist your business operations today? You can also request a human specialist at any time.";
 }
